@@ -21,6 +21,16 @@ Cypress.Commands.add('loginSaucedemo', (username, password) => {
 Cypress.Commands.add('VerifyError', (message) => {
     cy.get('[data-test="error"]').should('have.text', message)
 })
+
+Cypress.Commands.add('VerifyURL', (url) => {
+    cy.url().should('include',url)
+})
+
+Cypress.Commands.add('VerifyContain', (locator,text) => {
+    cy.get(locator).should('contain.text', text)
+})
+
+
 //
 //
 // -- This is a child command --

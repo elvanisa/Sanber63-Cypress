@@ -3,6 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://www.saucedemo.com/',
+    urlProd: 'www.prod.com',
     env:{
       userstg: "user stg",
       userprod: "user prod"
