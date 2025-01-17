@@ -10,5 +10,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
+          build: npm run build
+          start: npm start
           browser: chrome
           spec: cypress/e2e/web-test/testfixtures.cy.js
