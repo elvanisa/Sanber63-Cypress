@@ -8,7 +8,7 @@ describe('Saucedemo Login Scenarios', () => {
     cy.loginSaucedemo('standard_user','secret_sauce')
     cy.get('[data-test="title"]').should('contain.text','Products')
   })
-  it.only('login failed - empty username', () => {
+  it('login failed - empty username', () => {
     cy.get('#password').type('secret_sauce')
     //cy.get('#login-button').click()
     saucedemoPage.clickLogin()
@@ -27,8 +27,10 @@ describe('Saucedemo Login Scenarios', () => {
     //cy.get('#login-button').click()
     //cy.get('[data-test="error"]').should('have.text', 'Epic sadface: Sorry, this user has been locked out.')
   })
-  it.skip('login env', () => {
-    cy.get('#user-name').type(Cypress.env('userprod'))
+  it('login env', () => {
+    cy.ketik('#user-name','standard_user')
     cy.get('#password').type('secret_sauce')
-    cy.get('#ogin-button').click()})
+    cy.get('#login-button').click()
+  }
+  )
 })

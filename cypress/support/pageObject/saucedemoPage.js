@@ -10,6 +10,7 @@ class saucedemoPage {
     bikeLight = '[data-test="add-to-cart-sauce-labs-bike-light"]'
     TShirt = '[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]'
     cartList = '[data-test="item-0-title-link"] > [data-test="inventory-item-name"]'
+    checkoutBtn = '[data-test="checkout"]'
 
     clickLogin(){
         cy.get(this.login_btn).click()

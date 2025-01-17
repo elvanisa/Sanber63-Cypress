@@ -13,6 +13,7 @@
 // Cypress.Commands.add('login', (email, password) => { ... })
 
 Cypress.Commands.add('loginSaucedemo', (username, password) => {
+    cy.visit('')
     cy.get('#user-name').type(username)
     cy.get('#password').type(password)
     cy.get('#login-button').click()
@@ -27,9 +28,16 @@ Cypress.Commands.add('VerifyURL', (url) => {
 })
 
 Cypress.Commands.add('VerifyContain', (locator,text) => {
-    cy.get(locator).should('contain.text', text)
+    cy.get(locator)
+    .should('contain.text', text)
 })
 
+Cypress.Commands.add('ketik', (locator,text) => {
+    cy.get(locator)
+    .should('be.visible')
+    .clear()
+    .type(text)
+})
 
 //
 //
