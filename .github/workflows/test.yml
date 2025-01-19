@@ -10,7 +10,10 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm start
           browser: chrome
-          spec: cypress/e2e/web-test/testfixtures.cy.js
+          spec: cypress/e2e/api-test/reqres.cy.js
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
