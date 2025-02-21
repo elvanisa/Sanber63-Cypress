@@ -5,7 +5,7 @@
   "main": "cypress.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "runSaucedemo": "cypress run --browser chrome --spec 'cypress/e2e/web-test/saucedemo.cy.js'"
+    "runSaucedemo": "cypress run --browser chrome --spec 'cypress/e2e/web-test/testfixtures.cy.js'"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/elvanisa/Sanber63-Cypress/issues"
   },
-  "homepage": "https://github.com/elvanisa/Sanber63-Cypress#readme"
+  "homepage": "https://github.com/elvanisa/Sanber63-Cypress#readme",
+  "devDependencies": {
+    "cypress": "^14.0.0"
+  }
 }
